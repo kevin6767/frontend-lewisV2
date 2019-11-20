@@ -5,7 +5,7 @@ import { Jumbotron } from './components/Jumbotron.js'
 class App extends Component {
     render() {
         return (
-            <div className="App">
+            <div>
                 <Jumbotron />
                 <h1 className={styles.red}>Hello World! I'm working! Am I working?</h1>
                
