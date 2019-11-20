@@ -1,0 +1,11 @@
+{
+  "name": "frontend-lewisv2",
+  "version": "1.0.0",
+  "description": "Working with creating a react app from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Eslick",
+  "license": "MIT"
+}
