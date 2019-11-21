@@ -7,7 +7,7 @@ class App extends Component {
         return (
             <div>
                 <Jumbotron />
-                <h1 className={styles.red}>Hello World! I'm working! Am I working?</h1>
+                <h2 className={styles.red}>Hello World! I'm working Am I working?</h2>
                
             </div>
         )
