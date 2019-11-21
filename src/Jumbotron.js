@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import img from '../assets/test.jpg'
+import img from './assets/test.jpg'
 import { hot } from 'react-hot-loader'
 
 

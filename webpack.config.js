@@ -1,8 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 
-const isDevelopment = process.env.NODE_ENV === 'development'
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
 module.exports = {
   entry: "./src/index.js",
   mode: "development",
@@ -27,9 +26,16 @@ module.exports = {
         ],
       },
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'scss-loader']
-      }
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
+      },
     ]
   },
   resolve: { extensions: ["*", ".js", ".jsx",".scss"] },
@@ -44,10 +50,6 @@ module.exports = {
     publicPath: "http://localhost:3000/dist/",
     hotOnly: true
   },
-  plugins: [new webpack.HotModuleReplacementPlugin(),
-        new MiniCssExtractPlugin({
-          filename: isDevelopment ? '[name].css' : '[name].[hash].css',
-          chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
-        })
+  plugins: [new webpack.HotModuleReplacementPlugin()
       ]
 };
