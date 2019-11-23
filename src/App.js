@@ -12,4 +12,3 @@ const App = () =>
     </div>
 
 export default hot(module)(App);
-
