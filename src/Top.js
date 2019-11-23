@@ -1,12 +1,17 @@
 import React from 'react'
-import { red } from './Top.module.scss'
+import './top.module.scss'
 
-export const Top = () => {
-    
-        return (
-            <div className={red}>
-                <h2>Hello World this should be red</h2>
-            </div>
-        );
-    
+const onClick = e => {
+    e.preventDefault()
+    alert(`dirka dirka`)
 }
+
+const Top = () =>
+    <div {...{
+        className: 'red'
+    }}>
+        <h2>Hello World this should be red (click me)</h2>
+    </div>
+
+export default Top
+
